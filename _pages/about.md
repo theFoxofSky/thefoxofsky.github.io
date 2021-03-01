@@ -12,9 +12,9 @@ I am a 5th year PhD candidate at South China University of Technology. My adviso
 
 I am interested in computer vision, deep learning, and machine learning. More specifically,
 - Object Detection
-- Auto Machine Learning
+- Image Classification
+- Neural Architecture Search
 - Tracking
-- Crowd Counting
 
 Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
 
