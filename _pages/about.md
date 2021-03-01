@@ -23,8 +23,6 @@ Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
 - **2021.03:**  Paper accepted in CVPR 2021. 
 - **2020.08:**  Win Honorable Mention in VisDrones Challenge 2020 held at ECCV 2020. 
 - **2019.10:**  Visit [Vision and Learning Lab](http://vllab.ucmerced.edu/) at UC Merced, under the supervision of Prof. [Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/). 
-- **2018.11:**  Get National Scholarship for Ph.D. Students from Chinese Ministry of Education.
-- **2018.09:**  Win Honorable Mention in VisDrones Challenge 2018 held at ECCV 2018. 
 
 ## Publications
 
