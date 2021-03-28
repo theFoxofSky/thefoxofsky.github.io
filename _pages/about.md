@@ -37,12 +37,29 @@ Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
 <img src="http://thefoxofsky.github.io/images/saic.jpg" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
+Decoupled Dynamic Filter Networks. CVPR, 2021.
+<br>
+<b>Jingkai Zhou</b>, Varun Jampani, Zhixiong Pi, Qiong Liu*, Ming-Hsuan Yang. 
+<br>
+<span><a href="http://thefoxofsky.github.io/files/ddf.pdf">pdf</a></span> / 
+<span><a href="http://thefoxofsky.github.io/files/ddf.mp4">video</a></span> / 
+<span><a href="http://thefoxofsky.github.io/ddf">project page</a></span> /
+<span><a href="http://github.com/theFoxofSky/DDF">code (github)</a></span> 
+<br>
+<br>
+</td>
+</tr>
+
+<tr style="border-collapse: separate; border-spacing:30em;">
+<td style="border-collapse: collapse; border: none;">
+<img src="http://thefoxofsky.github.io/images/saic.jpg" width="800"/>
+</td>
+<td style="border-collapse: collapse; border: none;">
 Scale adaptive image cropping for UAV object detection. Neurocomputing, 2019.
 <br>
 <b>Jingkai Zhou</b>, Chi-Man Vong, Qiong Liu*, Zhenyu Wang. 
 <br>
-<img src="http://thefoxofsky.github.io/images/pdf_icon.png" width="20" height="20" hspace="5">
-<span><a href="http://thefoxofsky.github.io/files/saic.pdf">paper</a></span>
+<span><a href="http://thefoxofsky.github.io/files/ddf.pdf">pdf</a></span>
 <br>
 <br>
 </td>
@@ -57,8 +74,7 @@ Benchmarking a large-scale FIR dataset for on-road pedestrian detection. Infrare
 <br>
 Zhewei Xu, Jiajun Zhuang, Qiong Liu*, <b>Jingkai Zhou</b>, Shaowu Peng. 
 <br>
-<img src="http://thefoxofsky.github.io/images/pdf_icon.png" width="20" height="20" hspace="5">
-<span><a href="http://thefoxofsky.github.io/files/dataset.pdf">paper</a></span>
+<span><a href="http://thefoxofsky.github.io/files/dataset.pdf">pdf</a></span>
 <br>
 <br>
 </td>
@@ -73,8 +89,7 @@ Object tracking via Online Multiple Instance Learning with reliable components. 
 <br>
 Feng Wu, Shaowu Peng, <b>Jingkai Zhou</b>, Qiong Liu*, Xiaojia Xie. 
 <br>
-<img src="http://thefoxofsky.github.io/images/pdf_icon.png" width="20" height="20" hspace="5">
-<span><a href="http://thefoxofsky.github.io/files/mil.pdf">paper</a></span>
+<span><a href="http://thefoxofsky.github.io/files/mil.pdf">pdf</a></span>
 <br>
 <br>
 </td>
