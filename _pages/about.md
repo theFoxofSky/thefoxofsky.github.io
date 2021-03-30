@@ -40,7 +40,7 @@ Decoupled Dynamic Filter Networks. CVPR, 2021.
 <b>Jingkai Zhou</b>, Varun Jampani, Zhixiong Pi, Qiong Liu*, Ming-Hsuan Yang. 
 <br>
 <span><a href="http://thefoxofsky.github.io/files/ddf.pdf">pdf</a></span> / 
-<span><a href="http://thefoxofsky.github.io/files/ddf.mp4">video</a></span> / 
+<span><a href="https://www.youtube.com/watch?v=QecJD5HUF7U">video</a></span> / 
 <span><a href="http://thefoxofsky.github.io/project_pages/ddf">project page</a></span> /
 <span><a href="http://github.com/theFoxofSky/DDF">code (github)</a></span> 
 <br>
