@@ -1,440 +1,720 @@
 
-<script src="http://www.google.com/jsapi" type="text/javascript"></script>
-<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<!DOCTYPE html>
+<html lang="en">
 
-<style type="text/css">
-	body {
-		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-		font-weight:300;
-		font-size:18px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 1100px;
-	}
+  <a name="home"> </a>
 
-	h1 {
-		font-size:32px;
-		font-weight:300;
-	}
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-	.disclaimerbox {
-		background-color: #eee;
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-		padding: 20px;
-	}
+  <title>Decoupled Dynamic Filter Networks</title>
 
-	video.header-vid {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-
-	img.header-img {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-
-	img.rounded {
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-
-	a:link,a:visited
-	{
-		color: #1367a7;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #208799;
-	}
-
-	td.dl-link {
-		height: 160px;
-		text-align: center;
-		font-size: 22px;
-	}
-
-	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-		        15px 15px 0 0px #fff, /* The fourth layer */
-		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-		        20px 20px 0 0px #fff, /* The fifth layer */
-		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-		        25px 25px 0 0px #fff, /* The fifth layer */
-		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
-
-		margin-left: 10px;
-		margin-right: 45px;
-	}
+  <meta name="author" content="Jingkai Zhou, Varun Jampani, et al." />
 
 
-	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
-		margin-top: 5px;
-		margin-left: 10px;
-		margin-right: 30px;
-		margin-bottom: 5px;
-	}
 
-	.vert-cent {
-		position: relative;
-	    top: 50%;
-	    transform: translateY(-50%);
-	}
+  <meta name="generator" content="Hugo 0.15" />
 
-	hr
-	{
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-	}
-</style>
+  <link rel="alternate" href="http://thefoxofsky.github.io/project_pages/ddf" type="application/rss+xml" title="Decoupled Dynamic Filter Networks">
 
-<html>
-	<head>
-		<title>Decoupled Dynamic Filter Networks</title>
-		<meta property="og:title" content="Decoupled Dynamic Filter Networks" />
-		<meta property="og:description" content="Jingkai Zhou, Varun Jampani, et al. 2021" />
-  </head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://bilateralnn.is.tuebingen.mpg.de/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://bilateralnn.is.tuebingen.mpg.de/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://bilateralnn.is.tuebingen.mpg.de/css/pygment_highlights.css" />
+
+
+  <meta property="og:title" content="Decoupled Dynamic Filter Networks" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="//" />
+  <meta property="og:image" content="" />
+
+</head>
+
 
   <body>
-    <br>
-          <center>
-          	<span style="font-size:36px">Decoupled Dynamic Filter Networks</span>
-	  		  <table align=center width=800px>
-	  			  <tr>
-	  	              <td align=center width=300px>
-	  					<center>
-							<span style="font-size:20px"><a href="http://thefoxofsky.github.io/">Jingkai Zhou<sup>1,2</sup> </a></span>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=300px>
-	  					<center>
-							<span style="font-size:20px"><a href="http://varunjampani.github.io/">Varun Jampani<sup>3</sup></a></span>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=300px>
-	  					<center>
-							<span style="font-size:20px">Zhixiong Pi<sup>2,4</sup></span>
-		  		  		</center>
-		  		  	  </td>
-		  		  	  </td>
-	  	              <td align=center width=300px>
-	  					<center>
-							<span style="font-size:20px">Qiong Liu*<sup>1</sup></span>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=500px>
-	  					<center>
-	  						<span style="font-size:20px"><a href="https://faculty.ucmerced.edu/mhyang/">Ming-Hsuan Yang<sup>2,3,5</sup></a></span>
-		  		  		</center>
-		  		  	  </td>
-		  		  </tr>
-			  </table>
-			  <td style="font-size:16px" align=center width=800px> <sup>1</sup> South China University of Technology</td>
-			  <td style="font-size:16px" align=center width=800px> <sup>2</sup> University of California at Merced</td>
-			  <td style="font-size:16px" align=center width=800px> <sup>3</sup> Google Research</td>
-			  <br>
-			  <td style="font-size:16px" align=center width=500px> <sup>4</sup> Huazhong University of Science and Technology</td>
-			  <td style="font-size:16px" align=center width=500px> <sup>5</sup> Yonsei University</td>
 
-	  		  <table align=center width=600px>
-	  			  <tr>
-	  	              <td align=center width=120px>
-	  					<center>
-	  						<span style="font-size:20px"><a href='https://arxiv.org/abs/1904.11486'>[Paper]</a></span>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=120px>
-	  					<center>
-	  						<span style="font-size:20px"><a href='https://github.com/theFoxofSky/DDF'>[Code]</a></span><br>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align=center width=120px>
-	  					<center>
-	  						<span style="font-size:20px"><a href="https://www.dropbox.com/s/dhf2gqt14sq76q7/poster_icml.pdf?dl=0">[Poster]</a></span><br>
-		  		  		</center>
-		  		  	  </td>
-		  		  	 </tr>
-	  			  <tr>
-			  </table>
-          </center>
-<!--		  <br>-->
-<!--          <center>-->
-<!--  	<table align=center width=750px>-->
-<!--			<tr>-->
-<!--				<td align=center width=150px>Input Semantics</td>-->
-<!--  	            <td width=35px>&emsp;</td>-->
-<!--				<td align=center width=150px><p style="border:2px; border-style:solid; border-color:#FF0000;"> GVSNet (Ours)</p></td>-->
-<!--				<td width=35px>&emsp;</td>-->
-<!--				<td align=center width=150px>SPADE[1]+SM[2]</td>-->
-<!--				<td width=35px>&emsp;</td>-->
-<!--				<td align=center width=150px>SPADE[1]+CVS[3]</td>-->
-<!--      </tr>-->
-<!--			<td width=35px> &emsp; </td>-->
-<!--			<tr>-->
-<!--				<td width=150px>-->
-<!--					<center>-->
-<!--						<img class="round" style="width:200px" src="./resources/video/carla/circle_r_0_25/0_input_sem.png"/>-->
-<!--		  		</center>-->
-<!--				</td>-->
-<!--				<td width=35px> &emsp; </td>-->
-<!--    	  <td width=150px>-->
-<!--					<center>-->
-<!--						<img class="round" style="border:2px solid red;" width="200" src="./resources/video/carla/circle_r_0_25/0_Ours_gif.gif"/>-->
-<!--	  			</center>-->
-<!--  	    </td>-->
-<!--				<td width=35px> &emsp; </td>-->
-<!--        <td width=150px>-->
-<!--  			<center>-->
-<!--  	    	<img class="round" style="width:200px" src="./resources/video/carla/circle_r_0_25/0_SPADE+SM_gif.gif"/>-->
-<!--				</center>-->
-<!--				</td>-->
-<!--  	    	<td width=35px>&emsp;</td>-->
-<!--        <td width=150px>-->
-<!--  				<center>-->
-<!--						<img class="round" style="width:200px" src="./resources/video/carla/circle_r_0_25/0_SPADE+CVS_gif.gif"/>-->
-<!--	  			</center>-->
-<!--  	    </td>-->
-<!--			</tr>-->
-<!--			<td width=35px> &emsp; </td>-->
-<!--			<tr>-->
-<!--				<td width=150px>-->
-<!--					<center>-->
-<!--						<img class="round" style="width:200px" src="./resources/video/carla/lateral_x__0_4_to_0_4/3108_input_sem.png"/>-->
-<!--		  		</center>-->
-<!--				</td>-->
-<!--				<td width=35px> &emsp; </td>-->
-<!--    	  <td width=150px>-->
-<!--					<center>-->
-<!--						<img class="round" style="border:2px solid red;" width="200" src="./resources/video/carla/lateral_x__0_4_to_0_4/3108_Ours_gif.gif"/>-->
-<!--	  			</center>-->
-<!--  	    </td>-->
-<!--				<td width=35px> &emsp; </td>-->
-<!--        <td width=150px>-->
-<!--  			<center>-->
-<!--  	    	<img class="round" style="width:200px" src="./resources/video/carla/lateral_x__0_4_to_0_4/3108_SPADE+SM_gif.gif"/>-->
-<!--				</center>-->
-<!--				</td>-->
-<!--  	    	<td width=35px>&emsp;</td>-->
-<!--        <td width=150px>-->
-<!--  				<center>-->
-<!--						<img class="round" style="width:200px" src="./resources/video/carla/lateral_x__0_4_to_0_4/3108_SPADE+CVS_gif.gif"/>-->
-<!--	  			</center>-->
-<!--  	    </td>-->
-<!--			</tr>-->
-<!--		</table>-->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://thefoxofsky.github.io/project_pages/ddf">Decoupled Dynamic Filter Networks</a>
+    </div>
 
-  	<table align=center width=850px>
-			<tr>
-				<td>
-					<!-- <center> -->
-					<!-- Describe GVS and out solution.-->
-					<!-- </center> -->
-				</td>
-			</tr>
-		</table>
-	</center>
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
 
 
-          <hr>
 
-		  <center><h1>Overview Video</h1></center>
-        	<p align="center">
+		  <li>
+          <a title="Overview" href="#overview">Overview</a>
+  	      </li>
+
+
+
+          <li>
+          <a title="Abstract" href="#abstract">Abstract</a>
+  	      </li>
+
+
+
+          <li>
+          <a title="Paper" href="#paper">Paper</a>
+  	      </li>
+
+
+
+          <li>
+          <a title="Code" href="#code">Code</a>
+  	      </li>
+
+
+
+          <li>
+          <a title="Usage" href="#usage">Usage</a>
+  	      </li>
+
+
+
+          <li>
+          <a title="Example" href="#example">Example</a>
+  	      </li>
+
+
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <header class="header-section ">
+      <div class="intro-header no-img">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="page-heading">
+                <h2>Decoupled Dynamic Filter Networks</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <style>
+    .bottom-one {
+      margin-bottom: -5mm;
+    }
+    </style>
+
+    <style>
+    .top-one {
+      margin-top: -1cm;
+    }
+    </style>
+
+
+    <div role="main" class="container">
+      <div class="row">
+        <div class="col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1">
+          <div class="posts-list">
+
+
+            <article class="post-preview">
+
+              <p class="top-one"> </p>
+        	  <h2 class="post-title"></h2>
+
+              <div class="post-entry">
+                <p style="text-align: center;">
+					<a href="http://thefoxofsky.github.io/" style="color: #CC0000"> Jingkai Zhou </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://varunjampani.github.io/" style="color: #CC0000"> Varun Jampani </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="" style="color: #CC0000"> Zhixiong Pi </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://www2.scut.edu.cn/software_en/2015/0724/c6649a97194/page.htm" style="color: #CC0000"> Qiong Liu </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://faculty.ucmerced.edu/mhyang/" style="color: #CC0000"> Ming-Hsuan Yang </a>
+				</p>
+
+    			<a name="overview"> </a>
+              </div>
+
+              <p class="bottom-one"> </p>
+
+             </article>
+
+ 			<article class="post-preview">
+        	  <h2 class="post-title">Overview</h2>
+
+
+
+              <div class="post-entry">
+                <p><a name="overview"> </a></p>
+
+				<p align="center">
 				<iframe width="660" height="395" src="https://www.youtube.com/embed/QecJD5HUF7U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe></p>
 
-		  </table>
+                <p><a name="abstract"> </a></p>
+              </div>
 
-          <hr>
+              <p class="bottom-one"> </p>
 
-	      <table align=center width=850px>
-	  		  <center><h1>Abstract</h1></center>
-	  		  <tr>
-	  		  	<td>
-							<div align="justify">
-							Convolution is one of the basic building blocks of CNN architectures. Despite its common use, standard convolution has two main shortcomings:
-							<i>Content-agnostic</i> and <i>Computation-heavy</i>. Dynamic filters are content-adaptive, while further increasing the computational overhead.
-							Depth-wise convolution is a lightweight variant, but it usually leads to a drop in CNN performance or requires a larger number of channels.
-							In this work, we propose the Decoupled Dynamic Filter (DDF) that can simultaneously tackle both of these shortcomings.
-							Inspired by recent advances in attention, DDF decouples a depth-wise dynamic filter into spatial and channel dynamic filters.
-							This decomposition considerably reduces the number of parameters and limits computational costs to the same level as depth-wise convolution.
-							Meanwhile, we observe a significant boost in performance when replacing standard convolution with DDF in classification networks.
-							ResNet50 / 101 get improved by 1.9% and 1.3% on the top-1 accuracy, while their computational costs are reduced by nearly half.
-							Experiments on the detection and joint upsampling networks also demonstrate the superior performance of the DDF upsampling variant
-							(DDF-Up) in comparison with standard convolution and specialized content-adaptive layers.
+             </article>
+            <article class="post-preview">
+        	  <h2 class="post-title">Abstract</h2>
 
-							</div>
-	  		    </td>
-	  		  </tr>
-			</table>
-  		  <br>
-		  <hr>
+              <div class="post-entry">
+				<p align="justify"> Convolution is one of the basic building blocks of CNN architectures. Despite its common use, standard convolution has two main
+					shortcomings: <i>Content-agnostic</i> and <i>Computation-heavy</i>. Dynamic filters are content-adaptive, while further increasing the computational overhead.
+					Depth-wise convolution is a lightweight variant, but it usually leads to a drop in CNN performance or requires a larger number of channels.
+					In this work, we propose the Decoupled Dynamic Filter (DDF) that can simultaneously tackle both of these shortcomings.
+					Inspired by recent advances in attention, DDF decouples a depth-wise dynamic filter into spatial and channel dynamic filters.
+					This decomposition considerably reduces the number of parameters and limits computational costs to the same level as depth-wise convolution.
+					Meanwhile, we observe a significant boost in performance when replacing standard convolution with DDF in classification networks.
+					ResNet50 / 101 get improved by 1.9% and 1.3% on the top-1 accuracy, while their computational costs are reduced by nearly half.
+					Experiments on the detection and joint upsampling networks also demonstrate the superior performance of the DDF upsampling variant
+					(DDF-Up) in comparison with standard convolution and specialized content-adaptive layers.</p>
 
-  		  <table align=center width=700px>
-	  		  <center><h1>Method overview</h1></center>
-  			  <tr>
-  	              <td align=center width=700px>
-  					<center>
-						  <td><img class="round" style="width:800px" src="../images/ddf.jpg"/></td>
-	  		  		</center>
-			  </tr>
-		  </center>
-		  </table>
-  		  <table align=center width=850px>
-		  	<center>
-		  		<tr>
-		  			<td>
-				  	<!-- Method overview -->
-		  			</td>
-		  		</tr>
-		  </center>
-		  </table>
-		  <br>
-          <hr>
+				<p><a name="paper"> </a></p>
+              </div>
+              <p class="bottom-one"> </p>
+             </article>
+            <article class="post-preview">
+        	  <h2 class="post-title">Paper</h2>
 
+              <div class="post-entry">
+                <ul>
+				<li>Main Paper: <a href="../files/ddf.pdf" style="color: #CC0000"> PDF </a></li>
+				<li>Supplementary: <a href="../files/ddf-supp.pdf" style="color: #CC0000"> PDF </a></li>
+				<li>Poster: <a href="https://ps.is.tuebingen.mpg.de/uploads_file/attachment/attachment/279/cvpr_poster.pdf" style="color: #CC0000"> PDF </a></li>
+				</ul>
 
-<!--   		  <table align=center width=700px>
-  			  <tr>
-  	              <td align=center width=700px>
-  					<center>
-						  <td><img class="round" style="width:800px" src="./resources/fig1e.jpg"/></td>
-	  		  		</center>
-			  </tr>
-		  </table>
-		  <br> -->
+<p>Please consider citing the following papers if you make use of this work and/or the corresponding code:</p>
 
-		<!--
-		  <hr>
+<pre><code>@inproceedings{jampani:cvpr:2016,
+	title = {Decoupled Dynamic Filter Networks},
+	author = {Zhou, Jingkai and Jampani, Varun and Pi, Zhixiong and Liu, Qiong and Yang, Ming-Hsuan},
+	booktitle = { IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)},
+	month = jun,
+	year = {2021}
+}
+</code></pre>
 
-        <center><h1>Supplementary Video</h1></center>
-        <p align="center">
-		<iframe width="660" height="395" src="https://youtu.be/kyi5W5rKOnw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe></p>
+<p><a name="code"> </a></p>
+
+              </div>
+
+              <p class="bottom-one"> </p>
+
+             </article>
+
+            <article class="post-preview">
+        	  <h2 class="post-title">Code</h2>
 
 
-  		  <table align=center width=800px>
-			  <br>
-			  <tr><center>
-				<span style="font-size:28px">&nbsp;<a href='https://www.dropbox.com/s/bzo8kia5si811tm/antialiasing_bair.pptx?dl=0'>[Slides]</a>
-		  </table>
-        <hr>
-		-->
-	  <!-- NETWORK ARCHITECTURE, TRY THE MODEL -->
-	  <!--
- 		<center><h1>Code and Antialiased Models</h1></center>
 
-  		  <table align=center width=420px>
-		  	<center>
-		  		<tr>
-		  			<td>
-		  				<b>ImageNet Classification (shift-invariance vs accuracy)</b>
-		  			</td>
-		  		</tr>
-		  </center>
-		  </table>
-  		  <table align=center width=400px>
-  			  <tr>
-  	              <td align=center width=400px>
-  					<center>
-						  <td><img class="round" style="width:450px" src="./resources/imagenet_ind2_noalex.jpg"/></td>
+              <div class="post-entry">
+                <p>Code is available at <a href="https://github.com/thefoxofsky/DDF" style="color: #CC0000">here</a>. We use Pytorch to implement the DDF module and use CUDA toolkit to implement the DDF operation.</p>
 
-	  		  		</center>
-			  </tr>
-		  </table>
+<p><a name="usage"> </a></p>
 
-  		  <table align=center width=850px>
-		  	<center>
-		  		<tr>
-		  			<td>
-		  	As designed, adding low-pass filtering increases <b>shift-invariance (y-axis)</b>. Surprisingly, we also observe increases in <b>accuracy (x-axis)</b>, across architectures, as well as increased robustness. We have pretrained anti-aliased models, along with instructions for making your favorite architecture more shift-invariant.
-		  			</td>
-		  		</tr>
-		  </center>
-		  </table>
-		   -->
+              </div>
+
+              <p class="bottom-one"> </p>
+
+             </article>
+
+            <article class="post-preview">
+        	  <h2 class="post-title">Usage</h2>
 
 
-<!-- <a href="http://www.eecs.berkeley.edu/~rich.zhang/projects/2016_colorization/files/demo_v0/colorization_release_v0.caffemodel">[Model 129MB]</span> -->
 
-  		  <!-- <table align=center width=550px> -->
-  		  <table align=center width=490px>
-	 		<center><h1>Paper & Code</h1></center>
-  			  <tr>
-				  <!-- <td><a href="./resources/camera-ready.pdf"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td> -->
-				  <td><a href="https://arxiv.org/abs/2008.09106"><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
-				  <td><span style="font-size:14pt">Tewodros Habtegebrial, Varun Jampani, Orazio Gallo, Didier Stricker.<br>
-				  <b>Generative View Synthesis: <em>From Single-view Semantics to Novel-view Images  </em></b><br>
-				  Arxiv Preprint, 2020. <a href="https://arxiv.org/abs/2008.09106">Link</a><br>
-				  <span style="font-size:4pt"><a href=""><br></a>
-				  </span>
-				  </td>
-  	              </td>
-              </tr>
-  		  </table>
-		  <br>
+              <div class="post-entry">
+                <p>Learnable bilateral convolution layer is implemented as <code>Permutohedral</code> layer in Caffe neural network framework. The format of the filter follows closely the filter format of the standard spatial convolution. It has the shape (n, c, 1, f), with n = num_output, c = input_channels / groups, f = filter_size. Below is a sample prototxt for the layer along with explanations of different parameters of the layer.</p>
 
-		  <table align=center width=600px>
-			  <tr>
-				  <td><span style="font-size:14pt"><center>
-				  	<a href="./resources/arxiv_bib.txt">[Bibtex]</a>
-  	              </center></td>
-              </tr>
-  		  </table>
+<pre><code>layer {
+  name: &quot;permutohedral&quot;
 
-		  <hr>
-		  <br>
+  type: &quot;Permutohedral&quot;
 
-<table align=center width=900px>
-	<tr> <td> <span style="font-size:14pt"> References<center> </td> </tr>
-	<tr> <td> [1] SPADE: <em>Semantic Image Synthesis with Spatially-Adaptive Normalization</em>, Park et al. <a href="https://arxiv.org/abs/1903.07291">link</a></td> </tr>
-	<tr> <td> [2] SM: <em> Stereo Magnification: Learning View Synthesis using Multiplane Images</em>, Zhou et al. <a href="https://people.eecs.berkeley.edu/~tinghuiz/projects/mpi/"> link </a> </td> </tr>
-	<tr> <td> [3] CVS: <em> Monocular Neural Image Based Rendering with Continuous View Control</em>, Chen et al.   <a href="https://arxiv.org/abs/1901.01880">link</a></td> </tr>
+  bottom: &quot;input&quot;              # Input blob
+  bottom: &quot;in_features&quot;        # Input features
+  bottom: &quot;out_features&quot;       # Output features
+  bottom: &quot;in_lattice&quot;         # (Optional) Use the lattice information from another permutohedral layer
+                               # with the same features.
 
-</table>
-<hr>
-<br>
-  		  <table align=center width=900px>
-  			  <tr>
-  	              <td width=400px>
-  					<left>
-				This project was partially funded by the BMBF project VIDETE(01IW1800). <br>
-				We thank the SDS department at DFKI Kaiserslautern, for their support with GPU infrastructure. <br>
-				The template for this website is borrowed from <a href="https://richzhang.github.io/">Richard Zhang</a>.
+  top: &quot;output&quot;                # Output filtered blob
+  top: &quot;out_lattice&quot;           # (Optional) Outputs the lattice information that can be used by another
+                               # permutohedral layer with the same features.
+
+  permutohedral_param {
+    num_output: 1              # Number of filter banks == dimension of the output signal.
+
+    group:      1              # Number of convolutional groups (default is 1). The input signal is cut into
+                               # this many groups to compute the filtered result.
+                               # Each one of the (input_channels / groups) are responsible for one element in
+                               # the (num_output / groups) many output groups.
+
+    neighborhood_size: 2       # Filter neighborhood size
+
+    bias_term: true            # Whether to use bias term or not
+
+    norm_type: SYMMETRIC       # SYMMENTRIC (default): Applies the signal normalization before and after the
+                               #                       filtering;
+                               # AFTER:                Applies the signal normalization after the filtering.
+
+    offset_type: FULL          # FULL (default): Full Gaussian Offset;
+                               # DIAG:           Diagonal Gaussian offset;
+                               # NONE:           No offset.
+
+    visualize_lattice: false   # false (default): nothing changes and works as usual
+                               # true:            Will make barycentric coordinates uniform (useful for lattice visualisation)
+
+    do_skip_blur: false        # false (default): nothing changes and works as usual
+                               # true:            skips the blur step and only runs splat and slice
+
+    repeated_init: false       # false (default): constructs a new lattice with in and out features
+                               # true:            Makes use of in_lattice which is given as third bottom (required for this option)
+ }
+}
+</code></pre>
+
+<p>We also add <code>PixelFeature</code> layer in Caffe to extract features from the input image. Following is a sample prototxt to use that layer.</p>
+
+<pre><code>layer {
+  name: &quot;positional_rgb_features&quot;
+  type: &quot;PixelFeature&quot;
+  bottom: &quot;image_blob&quot;            # Input data blob
+  top: &quot;positional_rgb_features&quot;  # Output feature blob
+
+  permutohedral_feature_param{
+    type: POSITION_AND_RGB        # Feature type (others: RGB, POSITION, RGB_AND_POSITION)
+    pos_scale: 0.1                # Position feature scale (default: 1.0)
+    color_scale: 0.2              # color feature scale (default: 1.0)
+  }
+}
+</code></pre>
+
+<p><a name="example"> </a></p>
+
+              </div>
+
+              <p class="bottom-one"> </p>
+
+             </article>
+
+            <article class="post-preview">
+        	  <h2 class="post-title">Example: Segmenting Tiles</h2>
 
 
-			</left>
-		</td>
-			 </tr>
-		</table>
 
-		<br>
+              <div class="post-entry">
+                <p>This is an example tutorial for using Bilateral Convolution Layers (BCL) as illustrated in Sec. 6.1 of the main paper. This tutorial codes are available in <code>$bilateralNN/bilateralnn_code/examples/tile_segmentation/</code> folder of the source code repository. To try the example codes, you have to change the <code>CAFFE_ROOT</code> value in <a href=""><em>config.py</em></a> file to point to the caffe root directory.</p>
+
+<p>In order to illustrate the usefulness of BCL, we construct the following example. A randomly colored tile with size 20x20 is placed on a random colored background of size 64x64 with additional Gaussian noise. The task is to segment out the smaller tile from the background. Some sample tile images are shown below:</p>
+
+<p><center>
+
+<figure >
+
+        <img src="sample_tiles.jpg" />
 
 
-</body>
+    <figcaption>
+        <h4>Sample Tile Images</h4>
+
+    </figcaption>
+
+</figure>
+
+</center></p>
+
+<p>We created a dataset of 10K train, 1K validation and 1K test images. Python script for generating sample tile images: <a href="">get_tile_data.py</a></p>
+
+<p>A pixel classifier can not distinguish foreground from background since the color is random. We use 3 layered networks for this task. One is CNN with normal spatial convolutions and another one is BNN with learnable bilateral convolutions (BCL). The schematic of these networks is shown below. We use convolutions interleaved with ReLU non-linearities and, intermediate layers have 32 and 16 channels.</p>
+
+<p><center>
+<figure>
+    <img src="nn_schematic.png" width=1000 align="middle"/>
+    <figcaption>
+        <h4>Three layered CNN (left) and BNN (right) architectures used for segmenting tiles. Conv9 corresponds to 9x9 spatial convolution layer and BCL1 corresponds to 1-neighborhood permutohedral layer.</h4>
+    </figcaption>
+</figure>
+</center></p>
+
+<p>The following is the corresponding deploy prototxt for CNN (<a href="">cnn_deploy.prototxt</a>) and training prototxt is <a href="">cnn_train.prototxt</a>. We use 9x9 filters for spatial convolutions.</p>
+
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">cnn_deploy.prototxt (click to show)</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+    <pre><code>
+name: "TILES"
+input: "data"
+input_shape {
+dim: 1000
+dim: 3
+dim: 64
+dim: 64
+}
+force_backward: true
+
+layer {
+  name: "conv1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 0.1
+  }
+  convolution_param {
+    num_output: 32
+    pad: 4
+    kernel_size: 9
+    weight_filler {
+      type: "gaussian"
+      std: 0.001
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  bottom: "conv1"
+  top: "conv1"
+  name: "relu1"
+  type: "ReLU"
+}
+
+layer {
+  name: "conv2"
+  type: "Convolution"
+  bottom: "conv1"
+  top: "conv2"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 0.1
+  }
+  convolution_param {
+    num_output: 16
+    pad: 4
+    kernel_size: 9
+    weight_filler {
+      type: "gaussian"
+      std: 0.001
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+layer {
+  bottom: "conv2"
+  top: "conv2"
+  name: "relu2"
+  type: "ReLU"
+}
+
+layer {
+  name: "conv3"
+  type: "Convolution"
+  bottom: "conv2"
+  top: "conv_result"
+  param {
+    lr_mult: 1
+  }
+  param {
+    lr_mult: 0.1
+  }
+  convolution_param {
+    num_output: 2
+    pad: 4
+    kernel_size: 9
+    weight_filler {
+      type: "gaussian"
+      std: 0.001
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+</pre></code>
+    </div>
+  </div>
+</div>
+
+<p>The corresponding deploy prototxt for BNN is shown below (<a href="">bnn_deploy.prototxt</a>) and training prototxt is <a href="">bnn_train.prototxt</a>. The features used are RGBXY and the filter has a neighborhood of 1. The total number of parameters in this BNN is around 40K compared to 52K for the above CNN with 9x9 convolutions.</p>
+
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse2">bnn_deploy.prototxt (click to show)</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+    <pre><code>
+name: "TILES"
+input: "data"
+input_shape {
+  dim: 1000
+  dim: 3
+  dim: 64
+  dim: 64
+}
+force_backward: true
+
+layer {
+ name: "features"
+ type: "PixelFeature"
+ bottom: "data"                 # Input data blob
+ top: "bilateral_features"      # Output feature blob
+ pixel_feature_param{
+   type: POSITION_AND_RGB       # Feature type (others: RGB, POSITION)
+   pos_scale: 0.05              # Position feature scale
+   color_scale: 10              # Color feature scale
+ }
+}
+
+layer {
+  name: "permutohedral1"
+  type: "Permutohedral"
+  bottom: "data"                # Input blob
+  bottom: "bilateral_features"  # Input features
+  bottom: "bilateral_features"  # Output features
+
+  top: "conv1"                  # Output filtered blob
+  top: "lattice"                # Outputs the lattice that can be used by other permutohedral layer
+
+  permutohedral_param {
+    num_output: 32              # Number of filter banks == dimension of the output signal.
+    group: 1                    # Number of convolutional groups (default is 1).
+    neighborhood_size: 1        # Filter neighborhood size
+    bias_term: true             # Whether to use bias term or not
+    norm_type: AFTER            # SYMMENTRIC (default): Applies the signal normalization before and after the filtering;
+                                # AFTER:                Applies the signal normalization after the filtering.
+    offset_type: NONE           # FULL (default): Full Gaussian Offset;
+                                # DIAG:           Diagonal Gaussian offset;
+                                # NONE:           No offset.
+    filter_filler {
+      type: "gaussian"
+      std: 0.001
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+ }
+}
+layer {
+  bottom: "conv1"
+  top: "conv1"
+  name: "relu1"
+  type: "ReLU"
+}
+
+
+layer {
+  name: "permutohedral2"
+  type: "Permutohedral"
+  bottom: "conv1"
+  bottom: "bilateral_features"
+  bottom: "bilateral_features"
+  bottom: "lattice"
+
+  top: "conv2"
+
+  permutohedral_param {
+    num_output: 16
+    group: 1
+    neighborhood_size: 1
+    bias_term: true
+    norm_type: AFTER
+    offset_type: NONE
+
+    repeated_init: false
+    filter_filler {
+      type: "gaussian"
+      std: 0.001
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+ }
+}
+layer {
+  bottom: "conv2"
+  top: "conv2"
+  name: "relu2"
+  type: "ReLU"
+}
+
+
+layer {
+  name: "permutohedral3"
+  type: "Permutohedral"
+  bottom: "conv2"
+  bottom: "bilateral_features"
+  bottom: "bilateral_features"
+  bottom: "lattice"
+
+  top: "conv_result"
+
+  permutohedral_param {
+    num_output: 2
+    group: 1
+    neighborhood_size: 1
+    bias_term: true
+    norm_type: AFTER
+    offset_type: NONE
+
+    repeated_init: false
+    filter_filler {
+      type: "gaussian"
+      std: 0.001
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+ }
+}
+
+</pre></code>
+    </div>
+  </div>
+</div>
+
+<p>In this task, color is a discriminative feature for the label and thus doing filtering in high-dimensional RGBXY space would make the task easier. In other words, bilateral convolutions already <em>see</em> the color difference, near-by points are pre-grouped in the permutohedral lattice and the task remains to assign a label to the two groups. Lets see if this is really the case by checking whether BNN converges better than CNN.</p>
+
+<p>Training is performed by using <a href="">train.py</a> script. The syntax for using this training script is:
+<code>python train.py &lt;base_lr&gt; &lt;train_prototxt&gt; &lt;snapshot_prefix&gt; &lt;init_caffemodel(optional)&gt;</code>. For CNN, the optimal learning rate for SGD is found to be 0.01. CNN is trained with:</p>
+
+<pre><code>mkdir snapshot_models
+python train.py 0.01 cnn_train.prototxt snapshot_models/cnn_train
+</code></pre>
+
+<p>Similarly, BNN is trained with:</p>
+
+<pre><code>python train.py 1.0 bnn_train.prototxt snapshot_models/bnn_train
+</code></pre>
+
+<p>The above training commands saves the intermediate trained models in <code>./snapshot_models/</code> folder. Next, we test and plot the intersection over union (IoU) score for all the intermediate trained models using the script - <a href="">test_and_plot.py</a>:</p>
+
+<pre><code>python test_and_plot.py
+</code></pre>
+
+<p>This results in the following visualization of the training progress of CNN vs. BNN:
+<center>
+<figure>
+    <img src="train_plot_tiles.png" width=500 align="middle"/>
+    <figcaption>
+        <h4>Training progress in terms of test IoU vs. Iterations.</h4>
+    </figcaption>
+</figure>
+</center></p>
+
+<p>The above plot indicates that BNN has better convergence in comparison to CNN with similar number of parameters. The plots may look slightly different for you due to the random initialization in Caffe. You might have noticed from the training logs that each iteration of BNN is approximately 6-10 times slower (if you use GPU) than CNN. This is due the 5 dimensional filtering in BNN in comparison to 2D filtering in CNN. Some parts of the permutohedral layer uses CPU even when in GPU mode and can be speed up. We observe that CNN can also converge to near-perfect solution when bigger filter sizes are used. Refer to Fig. 5 and Sec. 6.1 of the main paper for more details.</p>
+
+              </div>
+
+              <p class="bottom-one"> </p>
+
+             </article>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+
+
+
+
+          <li>
+            <a href="mailto:varun.jampani@tuebingen.mpg.de" title="Email me">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+
+
+
+
+
+
+    		  <li>
+      			<a href="http://bilateralnn.is.tuebingen.mpg.de/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>
+
+        </ul>
+        <p class="copyright text-muted">
+    		  MPI, Tuebingen
+    		  &nbsp;&bull;&nbsp;
+    		  2016
+
+
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="http://bilateralnn.is.tuebingen.mpg.de/">Learning Sparse High Dimensional Filters</a>
+
+  	    </p>
+
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://bilateralnn.is.tuebingen.mpg.de/js/jquery-1.11.2.min.js"></script>
+<script src="http://bilateralnn.is.tuebingen.mpg.de/js/bootstrap.min.js"></script>
+<script src="http://bilateralnn.is.tuebingen.mpg.de/js/main.js"></script>
+
+
+
+  </body>
 </html>
