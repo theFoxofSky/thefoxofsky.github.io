@@ -65,27 +65,22 @@
   	      </li>
 
 
+          <li>
+          <a title="Method" href="#method">Method</a>
+  	      </li>
 
           <li>
-          <a title="Paper" href="#paper">Paper</a>
+          <a title="Experiments" href="#experiments">Experiments</a>
   	      </li>
 
 
-
           <li>
-          <a title="Code" href="#code">Code</a>
+          <a title="Visualization" href="#visualization">Visualization</a>
   	      </li>
 
 
-
           <li>
-          <a title="Usage" href="#usage">Usage</a>
-  	      </li>
-
-
-
-          <li>
-          <a title="Example" href="#example">Example</a>
+          <a title="Citation" href="#citation">Citation</a>
   	      </li>
 
 
@@ -149,6 +144,13 @@
 					<a href="https://faculty.ucmerced.edu/mhyang/" style="color: #CC0000"> Ming-Hsuan Yang </a>
 				</p>
 
+                <p style="text-align: center;">
+                    <a href="http://thefoxofsky.github.io/files/ddf.pdf" style="color: #007bb6"> <b>[Paper]</b> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="http://thefoxofsky.github.io/files/ddf-supp.pdf"" style="color: #007bb6"> <b>[Supplementary]</b> </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="" style="color: #007bb6"> <b>[Poster]</b> </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://github.com/thefoxofsky/DDF" style="color: #007bb6"> <b>[Code]</b> </a>
+				</p>
+
     			<a name="overview"> </a>
               </div>
 
@@ -188,48 +190,35 @@
 					Experiments on the detection and joint upsampling networks also demonstrate the superior performance of the DDF upsampling variant
 					(DDF-Up) in comparison with standard convolution and specialized content-adaptive layers.</p>
 
-				<p><a name="paper"> </a></p>
+				<p><a name="method"> </a></p>
               </div>
               <p class="bottom-one"> </p>
              </article>
             <article class="post-preview">
-        	  <h2 class="post-title">Paper</h2>
+        	  <h2 class="post-title">Method</h2>
 
               <div class="post-entry">
-                <ul>
-				<li>Main Paper: <a href="../files/ddf.pdf" style="color: #CC0000"> PDF </a></li>
-				<li>Supplementary: <a href="../files/ddf-supp.pdf" style="color: #CC0000"> PDF </a></li>
-				<li>Poster: <a href="https://ps.is.tuebingen.mpg.de/uploads_file/attachment/attachment/279/cvpr_poster.pdf" style="color: #CC0000"> PDF </a></li>
-				</ul>
+                <figure><center>
+                   <img src="http://thefoxofsky.github.io/images/ddf_1.png" width=1000 align="middle"/>
+                   </center>
+                </figure>
 
-<p>Please consider citing the following papers if you make use of this work and/or the corresponding code:</p>
+                <p align="justify"> Here we illustrate of the DDF operation and the DDF module. The orange color denotes spatial dynamic filters / branch, and
+                the green color denotes channel dynamic filters / branch. The filter application means applying the convolution operation at a single position.
+                ‘GAP’ means the global average pooling and ‘FC’ denotes the fully connected layer.</p>
 
-<pre><code>@inproceedings{jampani:cvpr:2016,
-	title = {Decoupled Dynamic Filter Networks},
-	author = {Zhou, Jingkai and Jampani, Varun and Pi, Zhixiong and Liu, Qiong and Yang, Ming-Hsuan},
-	booktitle = { IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)},
-	month = jun,
-	year = {2021}
-}
-</code></pre>
+                <figure><center>
+                   <img src="http://thefoxofsky.github.io/images/ddf_2.png" width=550 align="middle"/>
+                   </center>
+                </figure>
 
-<p><a name="code"> </a></p>
+                <p align="justify"> We also propose DDF-Up module for typical / joint upsampling scenario.
+                    Here is the structure of the DDF-Up module. When the upsampling scale factor is set to 2, the DDF-Up module contains 4
+                    branches. DDF-Up generate the high-resolution feature by stacking and pixel-shuffling the branch outputs.
+                    For typical upsampling, the guidance feature is predicted
+                    from input features via a depth-wise convolution layer</p>
 
-              </div>
-
-              <p class="bottom-one"> </p>
-
-             </article>
-
-            <article class="post-preview">
-        	  <h2 class="post-title">Code</h2>
-
-
-
-              <div class="post-entry">
-                <p>Code is available at <a href="https://github.com/thefoxofsky/DDF" style="color: #CC0000">here</a>. We use Pytorch to implement the DDF module and use CUDA toolkit to implement the DDF operation.</p>
-
-<p><a name="usage"> </a></p>
+                <p><a name="experiments"> </a></p>
 
               </div>
 
@@ -237,78 +226,39 @@
 
              </article>
 
-            <article class="post-preview">
-        	  <h2 class="post-title">Usage</h2>
-
-
+              <article class="post-preview">
+        	  <h2 class="post-title">Experiments</h2>
 
               <div class="post-entry">
-                <p>Learnable bilateral convolution layer is implemented as <code>Permutohedral</code> layer in Caffe neural network framework. The format of the filter follows closely the filter format of the standard spatial convolution. It has the shape (n, c, 1, f), with n = num_output, c = input_channels / groups, f = filter_size. Below is a sample prototxt for the layer along with explanations of different parameters of the layer.</p>
+                <p align="justify">To demonstrate the use of DDFs as basic building blocks, we experiment with the widely used ResNet architectures for image classification.
+                We switch the 3 by 3 convolution layer in the basic and bottleneck block of ResNet with DDF layers
+                and keep the original hyperparameters, especially using the same number of channels.</p>
 
-<pre><code>layer {
-  name: &quot;permutohedral&quot;
+                <figure><center>
+                    <img src="http://thefoxofsky.github.io/images/ddf_3.png" width=550 align="middle"/>
+                </center>
+                </figure>
 
-  type: &quot;Permutohedral&quot;
+                <p align="justify">As we can see, DDF-ResNets perform favorably against other filter types.
+                    In particular, DDF-ResNets surpass resnet50 and 101 by 1.9% and 1.3%, respectively,
+                    while reducing computational costs by nearly half.</p>
 
-  bottom: &quot;input&quot;              # Input blob
-  bottom: &quot;in_features&quot;        # Input features
-  bottom: &quot;out_features&quot;       # Output features
-  bottom: &quot;in_lattice&quot;         # (Optional) Use the lattice information from another permutohedral layer
-                               # with the same features.
+                <figure><center>
+                    <img src="http://thefoxofsky.github.io/images/ddf_4.png" width=550 align="middle"/>
+                </center>
+                </figure>
 
-  top: &quot;output&quot;                # Output filtered blob
-  top: &quot;out_lattice&quot;           # (Optional) Outputs the lattice information that can be used by another
-                               # permutohedral layer with the same features.
+                <p align="justify">Also, DDF-ResNets surpass related several state-of-the-art variants of ResNets.</p>
 
-  permutohedral_param {
-    num_output: 1              # Number of filter banks == dimension of the output signal.
 
-    group:      1              # Number of convolutional groups (default is 1). The input signal is cut into
-                               # this many groups to compute the filtered result.
-                               # Each one of the (input_channels / groups) are responsible for one element in
-                               # the (num_output / groups) many output groups.
+                <figure><center>
+                    <img src="http://thefoxofsky.github.io/images/ddf_5.png" width=550 align="middle"/>
+                </center>
+                </figure>
+                <p align="justify">We evaluate DDF-Up in the joint depth upsampling task.  DDF-Up surpasses standard CNN techniques like DJF and DJF+ by a large margin.
+                 DDF-Up also improves over dynamic-filtering PAC-Net by relatively 10%, while reducing computational costs by an order of magnitude.</p>
 
-    neighborhood_size: 2       # Filter neighborhood size
-
-    bias_term: true            # Whether to use bias term or not
-
-    norm_type: SYMMETRIC       # SYMMENTRIC (default): Applies the signal normalization before and after the
-                               #                       filtering;
-                               # AFTER:                Applies the signal normalization after the filtering.
-
-    offset_type: FULL          # FULL (default): Full Gaussian Offset;
-                               # DIAG:           Diagonal Gaussian offset;
-                               # NONE:           No offset.
-
-    visualize_lattice: false   # false (default): nothing changes and works as usual
-                               # true:            Will make barycentric coordinates uniform (useful for lattice visualisation)
-
-    do_skip_blur: false        # false (default): nothing changes and works as usual
-                               # true:            skips the blur step and only runs splat and slice
-
-    repeated_init: false       # false (default): constructs a new lattice with in and out features
-                               # true:            Makes use of in_lattice which is given as third bottom (required for this option)
- }
-}
-</code></pre>
-
-<p>We also add <code>PixelFeature</code> layer in Caffe to extract features from the input image. Following is a sample prototxt to use that layer.</p>
-
-<pre><code>layer {
-  name: &quot;positional_rgb_features&quot;
-  type: &quot;PixelFeature&quot;
-  bottom: &quot;image_blob&quot;            # Input data blob
-  top: &quot;positional_rgb_features&quot;  # Output feature blob
-
-  permutohedral_feature_param{
-    type: POSITION_AND_RGB        # Feature type (others: RGB, POSITION, RGB_AND_POSITION)
-    pos_scale: 0.1                # Position feature scale (default: 1.0)
-    color_scale: 0.2              # color feature scale (default: 1.0)
-  }
-}
-</code></pre>
-
-<p><a name="example"> </a></p>
+              <p><a name="visualization"> </a></p>
 
               </div>
 
@@ -316,334 +266,36 @@
 
              </article>
 
-            <article class="post-preview">
-        	  <h2 class="post-title">Example: Segmenting Tiles</h2>
-
-
+              <article class="post-preview">
+        	  <h2 class="post-title">Visualization</h2>
 
               <div class="post-entry">
-                <p>This is an example tutorial for using Bilateral Convolution Layers (BCL) as illustrated in Sec. 6.1 of the main paper. This tutorial codes are available in <code>$bilateralNN/bilateralnn_code/examples/tile_segmentation/</code> folder of the source code repository. To try the example codes, you have to change the <code>CAFFE_ROOT</code> value in <a href=""><em>config.py</em></a> file to point to the caffe root directory.</p>
 
-<p>In order to illustrate the usefulness of BCL, we construct the following example. A randomly colored tile with size 20x20 is placed on a random colored background of size 64x64 with additional Gaussian noise. The task is to segment out the smaller tile from the background. Some sample tile images are shown below:</p>
+                <p align="justify">We visualize 16 times joint depth upsampling results, where we can see that DDF-Up-Net recovers more details compared to PAC-Net and other techniques.</p>
+                <figure><center>
+                    <img src="http://thefoxofsky.github.io/images/ddf_6.png" width=1000 align="middle"/>
+                </center>
+                </figure>
 
-<p><center>
+              <p><a name="citation"> </a></p>
+              </div>
+              <p class="bottom-one"> </p>
+             </article>
+            <article class="post-preview">
+        	  <h2 class="post-title">Citation</h2>
 
-<figure >
+              <div class="post-entry">
 
-        <img src="sample_tiles.jpg" />
+                <p>Please consider citing the following papers if you make use of this work and/or the corresponding code:</p>
 
-
-    <figcaption>
-        <h4>Sample Tile Images</h4>
-
-    </figcaption>
-
-</figure>
-
-</center></p>
-
-<p>We created a dataset of 10K train, 1K validation and 1K test images. Python script for generating sample tile images: <a href="">get_tile_data.py</a></p>
-
-<p>A pixel classifier can not distinguish foreground from background since the color is random. We use 3 layered networks for this task. One is CNN with normal spatial convolutions and another one is BNN with learnable bilateral convolutions (BCL). The schematic of these networks is shown below. We use convolutions interleaved with ReLU non-linearities and, intermediate layers have 32 and 16 channels.</p>
-
-<p><center>
-<figure>
-    <img src="nn_schematic.png" width=1000 align="middle"/>
-    <figcaption>
-        <h4>Three layered CNN (left) and BNN (right) architectures used for segmenting tiles. Conv9 corresponds to 9x9 spatial convolution layer and BCL1 corresponds to 1-neighborhood permutohedral layer.</h4>
-    </figcaption>
-</figure>
-</center></p>
-
-<p>The following is the corresponding deploy prototxt for CNN (<a href="">cnn_deploy.prototxt</a>) and training prototxt is <a href="">cnn_train.prototxt</a>. We use 9x9 filters for spatial convolutions.</p>
-
-<div class="panel-group">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse1">cnn_deploy.prototxt (click to show)</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-    <pre><code>
-name: "TILES"
-input: "data"
-input_shape {
-dim: 1000
-dim: 3
-dim: 64
-dim: 64
-}
-force_backward: true
-
-layer {
-  name: "conv1"
-  type: "Convolution"
-  bottom: "data"
-  top: "conv1"
-  param {
-    lr_mult: 1
-  }
-  param {
-    lr_mult: 0.1
-  }
-  convolution_param {
-    num_output: 32
-    pad: 4
-    kernel_size: 9
-    weight_filler {
-      type: "gaussian"
-      std: 0.001
-    }
-    bias_filler {
-      type: "constant"
-      value: 0
-    }
-  }
-}
-layer {
-  bottom: "conv1"
-  top: "conv1"
-  name: "relu1"
-  type: "ReLU"
-}
-
-layer {
-  name: "conv2"
-  type: "Convolution"
-  bottom: "conv1"
-  top: "conv2"
-  param {
-    lr_mult: 1
-  }
-  param {
-    lr_mult: 0.1
-  }
-  convolution_param {
-    num_output: 16
-    pad: 4
-    kernel_size: 9
-    weight_filler {
-      type: "gaussian"
-      std: 0.001
-    }
-    bias_filler {
-      type: "constant"
-      value: 0
-    }
-  }
-}
-layer {
-  bottom: "conv2"
-  top: "conv2"
-  name: "relu2"
-  type: "ReLU"
-}
-
-layer {
-  name: "conv3"
-  type: "Convolution"
-  bottom: "conv2"
-  top: "conv_result"
-  param {
-    lr_mult: 1
-  }
-  param {
-    lr_mult: 0.1
-  }
-  convolution_param {
-    num_output: 2
-    pad: 4
-    kernel_size: 9
-    weight_filler {
-      type: "gaussian"
-      std: 0.001
-    }
-    bias_filler {
-      type: "constant"
-      value: 0
-    }
-  }
-}
-
-</pre></code>
-    </div>
-  </div>
-</div>
-
-<p>The corresponding deploy prototxt for BNN is shown below (<a href="">bnn_deploy.prototxt</a>) and training prototxt is <a href="">bnn_train.prototxt</a>. The features used are RGBXY and the filter has a neighborhood of 1. The total number of parameters in this BNN is around 40K compared to 52K for the above CNN with 9x9 convolutions.</p>
-
-<div class="panel-group">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse2">bnn_deploy.prototxt (click to show)</a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-    <pre><code>
-name: "TILES"
-input: "data"
-input_shape {
-  dim: 1000
-  dim: 3
-  dim: 64
-  dim: 64
-}
-force_backward: true
-
-layer {
- name: "features"
- type: "PixelFeature"
- bottom: "data"                 # Input data blob
- top: "bilateral_features"      # Output feature blob
- pixel_feature_param{
-   type: POSITION_AND_RGB       # Feature type (others: RGB, POSITION)
-   pos_scale: 0.05              # Position feature scale
-   color_scale: 10              # Color feature scale
- }
-}
-
-layer {
-  name: "permutohedral1"
-  type: "Permutohedral"
-  bottom: "data"                # Input blob
-  bottom: "bilateral_features"  # Input features
-  bottom: "bilateral_features"  # Output features
-
-  top: "conv1"                  # Output filtered blob
-  top: "lattice"                # Outputs the lattice that can be used by other permutohedral layer
-
-  permutohedral_param {
-    num_output: 32              # Number of filter banks == dimension of the output signal.
-    group: 1                    # Number of convolutional groups (default is 1).
-    neighborhood_size: 1        # Filter neighborhood size
-    bias_term: true             # Whether to use bias term or not
-    norm_type: AFTER            # SYMMENTRIC (default): Applies the signal normalization before and after the filtering;
-                                # AFTER:                Applies the signal normalization after the filtering.
-    offset_type: NONE           # FULL (default): Full Gaussian Offset;
-                                # DIAG:           Diagonal Gaussian offset;
-                                # NONE:           No offset.
-    filter_filler {
-      type: "gaussian"
-      std: 0.001
-    }
-    bias_filler {
-      type: "constant"
-      value: 0
-    }
- }
-}
-layer {
-  bottom: "conv1"
-  top: "conv1"
-  name: "relu1"
-  type: "ReLU"
-}
-
-
-layer {
-  name: "permutohedral2"
-  type: "Permutohedral"
-  bottom: "conv1"
-  bottom: "bilateral_features"
-  bottom: "bilateral_features"
-  bottom: "lattice"
-
-  top: "conv2"
-
-  permutohedral_param {
-    num_output: 16
-    group: 1
-    neighborhood_size: 1
-    bias_term: true
-    norm_type: AFTER
-    offset_type: NONE
-
-    repeated_init: false
-    filter_filler {
-      type: "gaussian"
-      std: 0.001
-    }
-    bias_filler {
-      type: "constant"
-      value: 0
-    }
- }
-}
-layer {
-  bottom: "conv2"
-  top: "conv2"
-  name: "relu2"
-  type: "ReLU"
-}
-
-
-layer {
-  name: "permutohedral3"
-  type: "Permutohedral"
-  bottom: "conv2"
-  bottom: "bilateral_features"
-  bottom: "bilateral_features"
-  bottom: "lattice"
-
-  top: "conv_result"
-
-  permutohedral_param {
-    num_output: 2
-    group: 1
-    neighborhood_size: 1
-    bias_term: true
-    norm_type: AFTER
-    offset_type: NONE
-
-    repeated_init: false
-    filter_filler {
-      type: "gaussian"
-      std: 0.001
-    }
-    bias_filler {
-      type: "constant"
-      value: 0
-    }
- }
-}
-
-</pre></code>
-    </div>
-  </div>
-</div>
-
-<p>In this task, color is a discriminative feature for the label and thus doing filtering in high-dimensional RGBXY space would make the task easier. In other words, bilateral convolutions already <em>see</em> the color difference, near-by points are pre-grouped in the permutohedral lattice and the task remains to assign a label to the two groups. Lets see if this is really the case by checking whether BNN converges better than CNN.</p>
-
-<p>Training is performed by using <a href="">train.py</a> script. The syntax for using this training script is:
-<code>python train.py &lt;base_lr&gt; &lt;train_prototxt&gt; &lt;snapshot_prefix&gt; &lt;init_caffemodel(optional)&gt;</code>. For CNN, the optimal learning rate for SGD is found to be 0.01. CNN is trained with:</p>
-
-<pre><code>mkdir snapshot_models
-python train.py 0.01 cnn_train.prototxt snapshot_models/cnn_train
-</code></pre>
-
-<p>Similarly, BNN is trained with:</p>
-
-<pre><code>python train.py 1.0 bnn_train.prototxt snapshot_models/bnn_train
-</code></pre>
-
-<p>The above training commands saves the intermediate trained models in <code>./snapshot_models/</code> folder. Next, we test and plot the intersection over union (IoU) score for all the intermediate trained models using the script - <a href="">test_and_plot.py</a>:</p>
-
-<pre><code>python test_and_plot.py
-</code></pre>
-
-<p>This results in the following visualization of the training progress of CNN vs. BNN:
-<center>
-<figure>
-    <img src="train_plot_tiles.png" width=500 align="middle"/>
-    <figcaption>
-        <h4>Training progress in terms of test IoU vs. Iterations.</h4>
-    </figcaption>
-</figure>
-</center></p>
-
-<p>The above plot indicates that BNN has better convergence in comparison to CNN with similar number of parameters. The plots may look slightly different for you due to the random initialization in Caffe. You might have noticed from the training logs that each iteration of BNN is approximately 6-10 times slower (if you use GPU) than CNN. This is due the 5 dimensional filtering in BNN in comparison to 2D filtering in CNN. Some parts of the permutohedral layer uses CPU even when in GPU mode and can be speed up. We observe that CNN can also converge to near-perfect solution when bigger filter sizes are used. Refer to Fig. 5 and Sec. 6.1 of the main paper for more details.</p>
+                <pre><code>@inproceedings{jampani:cvpr:2016,
+                    title = {Decoupled Dynamic Filter Networks},
+                    author = {Zhou, Jingkai and Jampani, Varun and Pi, Zhixiong and Liu, Qiong and Yang, Ming-Hsuan},
+                    booktitle = { IEEE/CVF Conf. on Computer Vision and Pattern Recognition (CVPR)},
+                    month = jun,
+                    year = {2021}
+                }
+                </code></pre>
 
               </div>
 
@@ -667,7 +319,7 @@ python train.py 0.01 cnn_train.prototxt snapshot_models/cnn_train
 
 
           <li>
-            <a href="mailto:varun.jampani@tuebingen.mpg.de" title="Email me">
+            <a href="mailto:fs.jingkaizhou@gmail.com" title="Email me">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
@@ -677,27 +329,15 @@ python train.py 0.01 cnn_train.prototxt snapshot_models/cnn_train
 
 
 
-
-
-
-    		  <li>
-      			<a href="http://bilateralnn.is.tuebingen.mpg.de/index.xml" title="RSS">
-      			  <span class="fa-stack fa-lg">
-        				<i class="fa fa-circle fa-stack-2x"></i>
-        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-      			  </span>
-      			</a>
-    		  </li>
-
         </ul>
         <p class="copyright text-muted">
-    		  MPI, Tuebingen
+    		  Jingkai Zhou
     		  &nbsp;&bull;&nbsp;
-    		  2016
+    		  2021
 
 
     		  &nbsp;&bull;&nbsp;
-    		  <a href="http://bilateralnn.is.tuebingen.mpg.de/">Learning Sparse High Dimensional Filters</a>
+    		  <a href="http://thefoxofsky.github.io/project_pages/ddf">Decoupled Dynamic Filter Networks</a>
 
   	    </p>
 
