@@ -32,7 +32,7 @@ Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
 
 <tr style="border-collapse: separate; border-spacing:30em;">
 <td style="border-collapse: collapse; border: none;">
-<img src="http://thefoxofsky.github.io/images/ddf_1.jpg" width="800"/>
+<img src="http://thefoxofsky.github.io/images/ddf_1.png" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
 Decoupled Dynamic Filter Networks. CVPR, 2021.
