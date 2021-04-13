@@ -6,7 +6,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a 5th year bachelor-straight-to-PhD student at South China University of Technology. My advisor is Prof. Qiong Liu. Before that, I obtained my B.E. degree in School of Software Engineering, South China University of Technology in 2015.  I serve as the **reviewer** for several top-tier conferences, such as **ICCV**, **CVPR**, and **AAAI**.
+I am a fifth-year bachelor-straight-to-PhD student at South China University of Technology. My advisor is Prof. Qiong Liu. Before that, I obtained my B.E. degree in School of Software Engineering, South China University of Technology in 2015.  I serve as the **reviewer** for several top-tier conferences, such as **ICCV**, **CVPR**, and **AAAI**.
 
 I am interested in computer vision, deep learning, and machine learning. More specifically,
 - Object Detection
