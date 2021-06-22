@@ -57,7 +57,7 @@ Scale adaptive image cropping for UAV object detection. Neurocomputing, 2019.
 <br>
 <b>Jingkai Zhou</b>, Chi-Man Vong, Qiong Liu*, Zhenyu Wang. 
 <br>
-<span><a href="http://thefoxofsky.github.io/files/ddf.pdf">pdf</a></span>
+<span><a href="http://thefoxofsky.github.io/files/saic.pdf">pdf</a></span>
 <br>
 <br>
 </td>
