@@ -34,17 +34,18 @@ Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
 
 <tr style="border-collapse: separate; border-spacing:30em;">
 <td style="border-collapse: collapse; border: none;">
-Decoupled Dynamic Filter Networks. AAAI, 2022.
+<img src="http://thefoxofsky.github.io/images/scaled_relu.jpg" width="800"/>
+</td>
+<td style="border-collapse: collapse; border: none;">
+Scaled ReLU Matters for Training Vision Transformers. AAAI, 2022.
 <br>
 Pichao Wang, Xue Wang, Hao Luo, <b>Jingkai Zhou</b>, Zhipeng Zhou, Fan Wang, Hao Li, Rong Jin.
 <br>
-<span><a href="https://arxiv.org/pdf/2109.03810.pdf">pdf</a></span> / 
+<span><a href="https://arxiv.org/pdf/2109.03810.pdf">pdf</a></span> 
 <br>
 <br>
 </td>
 </tr>
-
-<table style="border: none; border-collapse: collapse;" border="0"> 
 
 <tr style="border-collapse: separate; border-spacing:30em;">
 <td style="border-collapse: collapse; border: none;">
