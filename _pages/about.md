@@ -18,7 +18,9 @@ Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
 
 ## News
 
-- **2021.03:**  Paper accepted in CVPR 2021. 
+- **2021.12:**  One paper accepted in AAAI 2022. 
+- **2021.05:**  Research internship at Alibaba DAMO Academy. 
+- **2021.03:**  One paper accepted in CVPR 2021. 
 - **2020.08:**  Win Honorable Mention in VisDrones Challenge 2020 held at ECCV 2020. 
 - **2019.10:**  Visit [Vision and Learning Lab](http://vllab.ucmerced.edu/) at UC Merced, under the supervision of Prof. [Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/). 
 - **2018.11:**  Get National Scholarship for Ph.D. Students from Chinese Ministry of Education.
@@ -27,6 +29,20 @@ Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
 ## Publications
 
 [\[Google Scholar\]](https://scholar.google.com/citations?hl=en&user=80d4v4kAAAAJ)
+
+<table style="border: none; border-collapse: collapse;" border="0"> 
+
+<tr style="border-collapse: separate; border-spacing:30em;">
+<td style="border-collapse: collapse; border: none;">
+Decoupled Dynamic Filter Networks. AAAI, 2022.
+<br>
+Pichao Wang, Xue Wang, Hao Luo, <b>Jingkai Zhou</b>, Zhipeng Zhou, Fan Wang, Hao Li, Rong Jin.
+<br>
+<span><a href="https://arxiv.org/pdf/2109.03810.pdf">pdf</a></span> / 
+<br>
+<br>
+</td>
+</tr>
 
 <table style="border: none; border-collapse: collapse;" border="0"> 
 
