@@ -37,7 +37,7 @@ Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
 <img src="http://thefoxofsky.github.io/images/scaled_relu.jpg" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Scaled ReLU Matters for Training Vision Transformers.
+<b>Scaled ReLU Matters for Training Vision Transformers</b>.
 <br>
 <i>AAAI</i>, 2022.
 <br>
@@ -54,7 +54,7 @@ Pichao Wang, Xue Wang, Hao Luo, <b>Jingkai Zhou</b>, Zhipeng Zhou, Fan Wang, Hao
 <img src="http://thefoxofsky.github.io/images/ddf_1.png" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Decoupled Dynamic Filter Networks. 
+<b>Decoupled Dynamic Filter Networks</b>.
 <br>
 <i>CVPR</i>, 2021.
 <br>
@@ -74,7 +74,7 @@ Decoupled Dynamic Filter Networks.
 <img src="http://thefoxofsky.github.io/images/saic.jpg" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Scale adaptive image cropping for UAV object detection.
+<b>Scale adaptive image cropping for UAV object detection</b>.
 <br>
 <i>Neurocomputing</i>, 2019.
 <br>
@@ -91,7 +91,7 @@ Scale adaptive image cropping for UAV object detection.
 <img src="http://thefoxofsky.github.io/images/dataset.jpg" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Benchmarking a large-scale FIR dataset for on-road pedestrian detection.
+<b>Benchmarking a large-scale FIR dataset for on-road pedestrian detection</b>.
 <br>
 <i>Infrared Physics & Technology</i>, 2019.
 <br>
@@ -108,7 +108,7 @@ Zhewei Xu, Jiajun Zhuang, Qiong Liu*, <b>Jingkai Zhou</b>, Shaowu Peng.
 <img src="http://thefoxofsky.github.io/images/mil.jpg" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Object tracking via Online Multiple Instance Learning with reliable components. 
+<b>Object tracking via Online Multiple Instance Learning with reliable components</b>.
 <br>
 <i>Computer Vision and Image Understanding</i>, 2018.
 <br>
