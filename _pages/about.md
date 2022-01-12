@@ -37,7 +37,9 @@ Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
 <img src="http://thefoxofsky.github.io/images/scaled_relu.jpg" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Scaled ReLU Matters for Training Vision Transformers. AAAI, 2022.
+Scaled ReLU Matters for Training Vision Transformers.
+<br>
+<i>AAAI</i>, 2022.
 <br>
 Pichao Wang, Xue Wang, Hao Luo, <b>Jingkai Zhou</b>, Zhipeng Zhou, Fan Wang, Hao Li, Rong Jin.
 <br>
@@ -52,7 +54,9 @@ Pichao Wang, Xue Wang, Hao Luo, <b>Jingkai Zhou</b>, Zhipeng Zhou, Fan Wang, Hao
 <img src="http://thefoxofsky.github.io/images/ddf_1.png" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Decoupled Dynamic Filter Networks. CVPR, 2021.
+Decoupled Dynamic Filter Networks. 
+<br>
+<i>CVPR</i>, 2021.
 <br>
 <b>Jingkai Zhou</b>, Varun Jampani, Zhixiong Pi, Qiong Liu*, Ming-Hsuan Yang. 
 <br>
@@ -70,7 +74,9 @@ Decoupled Dynamic Filter Networks. CVPR, 2021.
 <img src="http://thefoxofsky.github.io/images/saic.jpg" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Scale adaptive image cropping for UAV object detection. Neurocomputing, 2019.
+Scale adaptive image cropping for UAV object detection.
+<br>
+<i>Neurocomputing</i>, 2019.
 <br>
 <b>Jingkai Zhou</b>, Chi-Man Vong, Qiong Liu*, Zhenyu Wang. 
 <br>
@@ -85,7 +91,9 @@ Scale adaptive image cropping for UAV object detection. Neurocomputing, 2019.
 <img src="http://thefoxofsky.github.io/images/dataset.jpg" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Benchmarking a large-scale FIR dataset for on-road pedestrian detection. Infrared Physics & Technology, 2019.
+Benchmarking a large-scale FIR dataset for on-road pedestrian detection.
+<br>
+<i>Infrared Physics & Technology</i>, 2019.
 <br>
 Zhewei Xu, Jiajun Zhuang, Qiong Liu*, <b>Jingkai Zhou</b>, Shaowu Peng. 
 <br>
@@ -100,7 +108,9 @@ Zhewei Xu, Jiajun Zhuang, Qiong Liu*, <b>Jingkai Zhou</b>, Shaowu Peng.
 <img src="http://thefoxofsky.github.io/images/mil.jpg" width="800"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-Object tracking via Online Multiple Instance Learning with reliable components. Computer Vision and Image Understanding, 2018
+Object tracking via Online Multiple Instance Learning with reliable components. 
+<br>
+<i>Computer Vision and Image Understanding</i>, 2018.
 <br>
 Feng Wu, Shaowu Peng, <b>Jingkai Zhou</b>, Qiong Liu*, Xiaojia Xie. 
 <br>
