@@ -17,5 +17,5 @@ Beyond research, I actively engage with the academic community as a reviewer for
 
 **Research Interests**: Video Generation, Image Generation
 
-**Contact**: [\[Email\]](fs.jingkaizhou@gmail.com) | [\[Google Scholar\]](https://scholar.google.com/citations?hl=en&user=80d4v4kAAAAJ) | [\[GitHub\]](https://github.com/theFoxofSky)
+**Contact**: [\[Email\]](fs.jingkaizhou@gmail.com)  [\[Google Scholar\]](https://scholar.google.com/citations?hl=en&user=80d4v4kAAAAJ) [\[GitHub\]](https://github.com/theFoxofSky)
 
