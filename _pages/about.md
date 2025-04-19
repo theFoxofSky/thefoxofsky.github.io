@@ -42,6 +42,7 @@ Wild</b>.
 <br>
 <br>
 </td>
+</tr>
 
 <tr style="border-collapse: separate; border-spacing:30em;">
 <td style="border-collapse: collapse; border: none;">
@@ -59,6 +60,7 @@ Benzhi Wang, <b>Jingkai Zhou</b>, Jingqi Bai, Yang Yang, Weihua Chen, Fan Wang, 
 <br>
 <br>
 </td>
+</tr>
 
 <tr style="border-collapse: separate; border-spacing:30em;">
 <td style="border-collapse: collapse; border: none;">
@@ -76,6 +78,7 @@ Benzhi Wang, <b>Jingkai Zhou</b>, Jingqi Bai, Yang Yang, Weihua Chen, Fan Wang, 
 <br>
 <br>
 </td>
+</tr>
 
 <tr style="border-collapse: separate; border-spacing:30em;">
 <td style="border-collapse: collapse; border: none;">
@@ -94,6 +97,7 @@ Min Wei*, <b>Jingkai Zhou*</b>, Junyao Sun, Xuesong Zhang.
 <br>
 <br>
 </td>
+</tr>
 
 <tr style="border-collapse: separate; border-spacing:30em;">
 <td style="border-collapse: collapse; border: none;">
@@ -111,6 +115,7 @@ Min Wei*, <b>Jingkai Zhou*</b>, Junyao Sun, Xuesong Zhang.
 <br>
 <br>
 </td>
+</tr>
 
 <tr style="border-collapse: separate; border-spacing:30em;">
 <td style="border-collapse: collapse; border: none;">
@@ -131,6 +136,5 @@ Min Wei*, <b>Jingkai Zhou*</b>, Junyao Sun, Xuesong Zhang.
 <br>
 </td>
 </tr>
-
 
 </table>
