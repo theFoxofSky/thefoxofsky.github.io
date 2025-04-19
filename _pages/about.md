@@ -6,118 +6,16 @@ redirect_from:
   - /about.html
 ---
 
-I am a fifth-year bachelor-straight-to-PhD student at South China University of Technology. My advisor is Prof. Qiong Liu. Before that, I obtained my B.E. degree in School of Software Engineering, South China University of Technology in 2015.  I serve as the **reviewer** for several top-tier conferences, such as **ICCV**, **CVPR**, and **AAAI**.
+I am currently a senior researcher at Alibaba DAMO Academy, focusing on AIGC, especially video generation.
+Prior to this, I worked as a research engineer at Tencent TEG, responsible for city generation.
 
-I am interested in computer vision, deep learning, and machine learning. More specifically,
-- Object Detection
-- Image Classification
-- Neural Architecture Search
-- Tracking
+I received my PhD from South China University of Technology (SCUT) under the supervision of Prof. **Qiong Liu**.
+During my PhD, I visited the University of California, Merced, where I studied dynamic neural networks under the guidance of Prof. **Ming-Hsuan Yang** and Dr. **Varun Jampani**. 
+My academic journey began at SCUT, where I earned my B.Eng. in software engineering.
 
-Here is my [CV](http://thefoxofsky.github.io/files/cv.pdf).
+Beyond research, I actively engage with the academic community as a reviewer for top-tier conferences and enjoy playing computer games in my free time.
 
-## News
+**Research Interests**: Video Generation, Image Generation
 
-- **2021.12:**  One paper accepted in AAAI 2022. 
-- **2021.05:**  Research internship at Alibaba DAMO Academy. 
-- **2021.03:**  One paper accepted in CVPR 2021. 
-- **2020.08:**  Win Honorable Mention in VisDrones Challenge 2020 held at ECCV 2020. 
-- **2019.10:**  Visit [Vision and Learning Lab](http://vllab.ucmerced.edu/) at UC Merced, under the supervision of Prof. [Ming-Hsuan Yang](https://faculty.ucmerced.edu/mhyang/). 
-- **2018.11:**  Get National Scholarship for Ph.D. Students from Chinese Ministry of Education.
-- **2018.09:**  Win Honorable Mention in VisDrones Challenge 2018 held at ECCV 2018. 
+**Contact**: [\[Email\]](fs.jingkaizhou@gmail.com) | [\[Google Scholar\]](https://scholar.google.com/citations?hl=en&user=80d4v4kAAAAJ) | [\[GitHub\]](https://github.com/theFoxofSky)
 
-## Publications
-
-[\[Google Scholar\]](https://scholar.google.com/citations?hl=en&user=80d4v4kAAAAJ)
-
-<table style="border: none; border-collapse: collapse;" border="0"> 
-
-<tr style="border-collapse: separate; border-spacing:30em;">
-<td style="border-collapse: collapse; border: none;">
-<img src="http://thefoxofsky.github.io/images/scaled_relu.jpg" width="800"/>
-</td>
-<td style="border-collapse: collapse; border: none;">
-<b>Scaled ReLU Matters for Training Vision Transformers</b>.
-<br>
-<i>AAAI</i>, 2022.
-<br>
-Pichao Wang, Xue Wang, Hao Luo, <b>Jingkai Zhou</b>, Zhipeng Zhou, Fan Wang, Hao Li, Rong Jin.
-<br>
-<span><a href="https://arxiv.org/pdf/2109.03810.pdf">pdf</a></span> 
-<br>
-<br>
-</td>
-</tr>
-
-<tr style="border-collapse: separate; border-spacing:30em;">
-<td style="border-collapse: collapse; border: none;">
-<img src="http://thefoxofsky.github.io/images/ddf_1.png" width="800"/>
-</td>
-<td style="border-collapse: collapse; border: none;">
-<b>Decoupled Dynamic Filter Networks</b>.
-<br>
-<i>CVPR</i>, 2021.
-<br>
-<b>Jingkai Zhou</b>, Varun Jampani, Zhixiong Pi, Qiong Liu*, Ming-Hsuan Yang. 
-<br>
-<span><a href="http://thefoxofsky.github.io/files/ddf.pdf">pdf</a></span> / 
-<span><a href="https://www.youtube.com/watch?v=QecJD5HUF7U">video</a></span> / 
-<span><a href="http://thefoxofsky.github.io/project_pages/ddf">project page</a></span> /
-<span><a href="http://github.com/theFoxofSky/DDF">code (github)</a></span> 
-<br>
-<br>
-</td>
-</tr>
-
-<tr style="border-collapse: separate; border-spacing:30em;">
-<td style="border-collapse: collapse; border: none;">
-<img src="http://thefoxofsky.github.io/images/saic.jpg" width="800"/>
-</td>
-<td style="border-collapse: collapse; border: none;">
-<b>Scale adaptive image cropping for UAV object detection</b>.
-<br>
-<i>Neurocomputing</i>, 2019.
-<br>
-<b>Jingkai Zhou</b>, Chi-Man Vong, Qiong Liu*, Zhenyu Wang. 
-<br>
-<span><a href="http://thefoxofsky.github.io/files/saic.pdf">pdf</a></span>
-<br>
-<br>
-</td>
-</tr>
-
-<tr style="border-collapse: separate; border-spacing:30em;">
-<td style="border-collapse: collapse; border: none;">
-<img src="http://thefoxofsky.github.io/images/dataset.jpg" width="800"/>
-</td>
-<td style="border-collapse: collapse; border: none;">
-<b>Benchmarking a large-scale FIR dataset for on-road pedestrian detection</b>.
-<br>
-<i>Infrared Physics & Technology</i>, 2019.
-<br>
-Zhewei Xu, Jiajun Zhuang, Qiong Liu*, <b>Jingkai Zhou</b>, Shaowu Peng. 
-<br>
-<span><a href="http://thefoxofsky.github.io/files/dataset.pdf">pdf</a></span>
-<br>
-<br>
-</td>
-</tr>
-
-<tr style="border-collapse: separate; border-spacing:30em;">
-<td style="border-collapse: collapse; border: none;">
-<img src="http://thefoxofsky.github.io/images/mil.jpg" width="800"/>
-</td>
-<td style="border-collapse: collapse; border: none;">
-<b>Object tracking via Online Multiple Instance Learning with reliable components</b>.
-<br>
-<i>Computer Vision and Image Understanding</i>, 2018.
-<br>
-Feng Wu, Shaowu Peng, <b>Jingkai Zhou</b>, Qiong Liu*, Xiaojia Xie. 
-<br>
-<span><a href="http://thefoxofsky.github.io/files/mil.pdf">pdf</a></span>
-<br>
-<br>
-</td>
-</tr>
-
-</table>
