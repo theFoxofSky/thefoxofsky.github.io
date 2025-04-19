@@ -28,9 +28,9 @@ Beyond research, I actively engage with the academic community as a reviewer for
 <img src="http://thefoxofsky.github.io/images/pdf_icon.png" width="100"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-<b>RealisDance-DiT: Simple yet Strong Baseline
-towards Controllable Character Animation in the
-Wild</b>.
+<b>RealisDance-DiT: Simple yet strong baseline
+towards controllable character animation in the
+wild</b>.
 <br>
 <i>arXiv</i>, 2025.
 <br>
@@ -122,7 +122,7 @@ Min Wei*, <b>Jingkai Zhou*</b>, Junyao Sun, Xuesong Zhang.
 <img src="http://thefoxofsky.github.io/images/pdf_icon.png" width="100"/>
 </td>
 <td style="border-collapse: collapse; border: none;">
-<b>Decoupled Dynamic Filter Networks</b>.
+<b>Decoupled dynamic filter networks</b>.
 <br>
 <i>CVPR</i>, 2021.
 <br>
