@@ -17,7 +17,7 @@ Beyond research, I actively engage with the academic community as a reviewer for
 
 **Research Interests**: Video Generation, Image Generation
 
-## Publications
+## Selected Publications
 
 [\[Google Scholar\]](https://scholar.google.com/citations?hl=en&user=80d4v4kAAAAJ)
 
