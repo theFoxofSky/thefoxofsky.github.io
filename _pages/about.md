@@ -16,6 +16,3 @@ My academic journey began at SCUT, where I earned my B.Eng. in software engineer
 Beyond research, I actively engage with the academic community as a reviewer for top-tier conferences and enjoy playing computer games in my free time.
 
 **Research Interests**: Video Generation, Image Generation
-
-**Contact**: [\[Email\]](fs.jingkaizhou@gmail.com)  [\[Google Scholar\]](https://scholar.google.com/citations?hl=en&user=80d4v4kAAAAJ) [\[GitHub\]](https://github.com/theFoxofSky)
-
