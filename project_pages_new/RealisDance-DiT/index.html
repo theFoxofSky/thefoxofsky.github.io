@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content=".">
+    <meta name="keywords"
+          content="RealisDance-DiT">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RealisDance-DiT</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./static/css/twentytwenty.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./img/logo.png">
+
+
+    <script src="./static/js/jquery-3.2.1.min.js"></script>
+    <script src="./static/js/jquery.event.move.js"></script>
+    <script src="./static/js/jquery.twentytwenty.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/fontawesome.all.min.js"></script>
+</head>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LKCDBW8851"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-LKCDBW8851');
+</script>
+
+
+<body>
+
+
+<section class="hero teaser ">
+    <div class="hero-body">
+        <div class="container is-max-desktop has-text-centered">
+            <div class="columns is-centered">
+                <div class="column has-text-centered ">
+                    <img src="img/logo.png" style="height:170px; margin-bottom: -10px;"></img>
+                    <h1 class="title is-1 publication-title has-text-centered" style="font-size: 2.5rem; line-height: 1.3;">
+                        Simple yet Strong Baseline towards Controllable Character Animation in the Wild
+                    </h1>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=80d4v4kAAAAJ">Jingkai Zhou</a><sup>1,2,3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://github.com/wyyfffff">Yifan Wu</a><sup>4</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=WXGg2rgAAAAJ">Shikai Li</a><sup>1,3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=XMSWYxMAAAAJ">Min Wei</a><sup>1,3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=lgDtKZcAAAAJ">Chao Fan</a><sup>5</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=KWVlYaMAAAAJ&hl">Weihua Chen</a><sup>1,3</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=vko6ra4AAAAJ">Wei Jiang</a><sup>2</sup>,
+                        </span>
+                        <span class="author-block">
+                          <a href="https://scholar.google.com/citations?user=WCRGTHsAAAAJ">Fan Wang</a><sup>1,3</sup>,
+                        </span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>Alibaba DAMO Academy, <sup>2</sup>Zhejiang University, <sup>3</sup>Hupan Lab,<br><sup>4</sup>Southern University of Science and Technology, <sup>5</sup>Shenzhen University</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                          <span class="link-block">
+                            <a href=""
+                               class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                                  <i class="ai ai-arxiv"></i>
+                              </span>
+                              <span>arXiv</span>
+                            </a>
+                          </span>
+                          <span class="link-block">
+                            <a href="https://github.com/damo-cv/RealisDance"
+                               class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                                  <i class="fab fa-github"></i>
+                              </span>
+                              <span>Code and Testset (coming soon)</span>
+                              </a>
+                          </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+        <div class="container" style="text-align: left;">
+            <div id="results-carousel-horizontal" class="carousel results-carousel">
+
+                <!-- 每个视频和字幕的包裹容器 -->
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/v/0001.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Character-Object Interactions</div>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/v/0002.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Stylized Characters</div>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/v/0003.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Rare Poses</div>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/v/0004.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Complex Gesture</div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="100%" preload controls>
+                        <source src="./video/v/0005.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-caption">Multi-Character Potential</div>
+                </div>
+
+                <!-- 其他视频项... -->
+
+            </div>
+
+            <div class="content has-text-justified" style="margin-top: 15px;">
+                Given a character image and pose sequences, the proposed <b>RealisDance-DiT</b> can generate impressive videos, dealing with the challenges of character-object interactions, stylized characters, rare poses, and complex gestures. <b>RealisDance-DiT</b> even shows potential for multi-character control, despite being trained on a single-character dataset.
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* 添加字幕样式 */
+.carousel-item {
+    position: relative;
+    width: 100%;
+}
+
+.video-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    backdrop-filter: blur(2px); /* 背景模糊效果 */
+}
+
+/* 如果是轮播组件，可能需要调整间距 */
+.carousel {
+    padding-bottom: 1px; /* 为字幕留出空间 */
+}
+</style>
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#results-carousel-horizontal', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+        bulmaCarousel.attach('#results-carousel-vertical', {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            loop: true,
+            autoplay: false,
+        });
+
+    });
+</script>
+
+
+<br><br><br>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        Controllable character animation remains a challenging problem, particularly in handling rare poses, stylized characters, character-object interactions, complex illumination, and dynamic scenes.
+                        To tackle these issues, prior work has largely focused on injecting pose and appearance guidance via elaborate bypass networks, but often struggles to generalize to open-world scenarios.
+                        In this paper, we propose a new perspective that, as long as the foundation model is powerful enough, straightforward model modifications with flexible fine-tuning strategies can largely address the above challenges, taking a step towards controllable character animation in the wild.
+                        Specifically, we introduce <b>RealisDance-DiT</b>, built upon the Wan-2.1 video foundation model.
+                        Our sufficient analysis reveals that the widely adopted Reference Net design is suboptimal for large-scale DiT models.
+                        Instead, we demonstrate that minimal modifications to the foundation model architecture yield a surprisingly strong baseline.
+                        We further propose the low-noise warmup and "large batches and small iterations" strategies to accelerate model convergence during fine-tuning while maximally preserving the priors of the foundation model.
+                        In addition, we introduce a new test dataset that captures diverse real-world challenges, complementing existing benchmarks such as TikTok dataset and UBC fashion video dataset, to comprehensively evaluate the proposed method.
+                        Extensive experiments show that <b>RealisDance-DiT</b> outperforms existing methods by a large margin.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="hero-body">
+        <div class="columns is-centered has-text-centered">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-three-fifths" style=" margin-top: 30px; margin-bottom: 20px;">
+                    <h2 class="title is-3">Method</h2>
+                    <div class="content has-text-justified">
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="arch" width="100%" src="./img/arch.png"/>
+                        </div>
+                        <b>Illustration of architecture modifications and fine-tunable model parameters.</b>
+                        The proposed <b>RealisDance-DiT</b> is fine-tuned under the final setting.
+                        We use the same three pose conditions as those used in RealisDance, <i>i.e.</i>, HaMeR , DWPose, and SMPL-CS.
+                        All pose conditions and the reference image are encoded using the original Wan-2.1 VAE.
+                        The encoded pose latents are concatenated along the channel dimension.
+                        Then, the concatenated pose latent and the reference latent are fed into the pose and reference patchifiers, respectively.
+                        The pose patchifier is initialized randomly, while the reference patchifier is initialized using the weights from the noise patchifier.
+                        Finally, the pose latent is added to the noise latent, and the reference latent is concatenated with the noise latent along the sequence length, before being sent to the subsequent DiT blocks.
+                    </div>
+                    <br>
+                    <div class="content has-text-justified">
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="shifted_rope" width="50%" src="./img/shifted_rope.jpg"/>
+                        </div>
+                        <b>Illustration of spatially shifted RoPE for the reference latent.</b> We also replace the Rotary Position Embedding (RoPE) used in self-attention with the shifted RoPE.
+                        The reference latent does not share RoPE with the noise latent. It employs the spatially shifted RoPE at the first frame, where the shifting is according to the height and width of the noise latent.
+                    </div>
+                    <br>
+                    <div class="content has-text-justified">
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="warmup" width="50%" src="./img/warmup.jpg"/>
+                        </div>
+                        <b>Illustration of low-noise warmup strategy.</b> When iteration <i>i</i> is smaller than the maximum warmup threshold <i>τ</i> , there is a greater probability of sampling small timesteps.
+                        As the iteration <i>i</i> increases, the probability of sampling large timesteps rises. Once <i>i</i> exceeds <i>τ</i> , the sampling distribution degrades to uniform sampling.
+                    </div>
+                    <br>
+                    <div class="content has-text-justified">
+                        <div class="hero-body" style="margin-top: 40px; margin-bottom: -30px;">
+                            <img id="bvi" width="100%" src="./img/bvi.jpg"/>
+                        </div>
+                        <b>Visualization of different batch configurations on the RealisDance-Val dataset.</b>
+                        '#' denotes the batch size.
+                        We suggest using a large batch size along with a small number of iterations for fine-tuning, which facilitates rapid convergence while maximally preserving the prior knowledge of the foundation model.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="hero teaser is-light is-small">
+    <div class="hero-body">
+
+        <div class="container" style="text-align: center; ">
+            <h2 class="title is-3">More results</h2>
+            <div id="more-results" class="carousel results-carousel">
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/4.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/5.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/6.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/7.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/8.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/9.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/10.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/11.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/12.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/13.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/14.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/15.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="carousel-item">
+                    <video muted autoplay loop width="98%" preload controls>
+                        <source src="./video/mv/16.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    $(window).on('load', function () {
+        bulmaCarousel.attach('#more-results', {
+            slidesToScroll: 1,
+            slidesToShow: 3,
+            loop: true,
+            autoplay: false,
+        });
+    });
+</script>
+
+
+<footer class="footer">
+    <div class="hero-body">
+        <div class="columns is-two-fifths is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        Website template credit to <a
+                            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, and is licensed under a <a
+                            rel="license"
+                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
